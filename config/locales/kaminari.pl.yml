@@ -1,0 +1,14 @@
+pl:
+  views:
+    pagination:
+      first: "&laquo; Pierwsze"
+      last: "Ostatnie &raquo;"
+      previous: "&lsaquo; Poprzednie"
+      next: "Następne &rsaquo;"
+      truncate: "..."
+      bootstrap:
+        first: "&laquo; Pierwsze"
+        last: "Ostatnie &raquo;"
+        previous: "&lsaquo; Poprzednie"
+        next: "Następne &rsaquo;"
+        truncate: "..."

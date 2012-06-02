@@ -1,0 +1,14 @@
+%h1 Edycja profilu
+.row &nbsp;
+= simple_form_for resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form-horizontal' } do |f|
+  .row
+    .span1
+      = image_tag current_user.gravatar_url size: 80
+    .span11
+      = f.input :name, required: true, autofocus: true, label: "Imię"
+      = f.input :password, label: "Hasło"
+      = f.input :password_confirmation, label: "Potwierdź hasło"
+      = f.input :current_password, label: "Obecne hasło", hint: "Obecne hasło jest wymagane do wprowadzenia zmian w koncie", required: true
+      .form-actions
+        = f.button :submit, "Zapisz"
+        = link_to "Usuń konto", registration_path(resource_name), method: :delete, confirm: "Czy aby na pewno?", class: 'btn btn-danger'

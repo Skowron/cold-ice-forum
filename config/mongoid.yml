@@ -1,0 +1,10 @@
+development:
+  host: localhost
+  database: forum_development
+
+test:
+  host: localhost
+  database: forum_test
+
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>

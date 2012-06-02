@@ -1,0 +1,9 @@
+%h1 Logowanie
+.row &nbsp;
+= simple_form_for resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-horizontal' } do |f|
+  .inputs
+    = f.input :email, autofocus: true, label: "Adres e-mail"
+    = f.input :password, label: "Hasło"
+    = f.input :remember_me, as: :boolean, label: "Zapamiętaj mnie"
+  .form-actions
+    = f.button :submit, "Zaloguj"

@@ -1,0 +1,16 @@
+%table.table.table-striped
+  %tbody
+    - @topics.each do |topic|
+      %tr
+        %td
+          %h4
+            = link_to topic.title, topic
+            = link_to raw("<small>ostatnia odpowiedź #{distance_of_time_in_words( Time.now, topic.posts.last.created_at )} temu</small>"), topic_path(topic) + "##{topic.posts.last.id}"
+        %td
+          .pull-right
+            #{topic.user.name} #{distance_of_time_in_words( Time.now, topic.created_at )} temu
+
+= link_to "Dodaj temat", new_topic_path, :class => 'btn btn-primary'
+
+.pull-right
+  = paginate @topics, theme: "bootstrap"

@@ -1,0 +1,5 @@
+development:
+  adapter: mysql
+  database: rails_development
+  username: root
+  password: my super secret password

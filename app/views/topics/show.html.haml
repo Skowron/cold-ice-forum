@@ -1,0 +1,22 @@
+%h1= @topic.title
+- if @topic.user == current_user
+  = link_to raw("usuń temat &times;"), topic_path(@topic), method: :delete, class: :close
+.row &nbsp;
+.row &nbsp;
+- @posts.each do |post|
+  = render post
+.row &nbsp;
+.row &nbsp;
+.row
+  .span6
+    - if user_signed_in?
+      %h4 Dodawanie posta
+      = form_for [@topic, Post.new] do |f|
+        = f.text_area :content, class: :span6
+        .row
+          .span6
+            .pull-right
+              = f.submit "Dodaj post", class: :btn
+  .span6
+    .pull-right
+      = paginate @posts, theme: "bootstrap"

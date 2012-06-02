@@ -1,0 +1,13 @@
+.row.post
+  .span12
+    .pull-left= image_tag post.user.gravatar_url( size: 60 ), title: post.user.name
+    .pull-left
+      %blockquote{class: (post.user == post.topic.user) ? "self-post" : ""}
+        %p
+          = markdown post.content
+        %small
+          %span{title: l(post.created_at)}
+            #{post.user.name} dodał(a) #{distance_of_time_in_words( Time.now, post.created_at, true )} temu
+            - if post.user == current_user
+              = link_to raw(icon(:remove)), topic_post_path(post.topic, post), method: :delete, class: 'post-control'
+.row &nbsp;
