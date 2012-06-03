@@ -1,7 +1,8 @@
-Wszystko leci na Ruby on Rails 3.2.3, czyli najnowszym. Do storage
-(noSQL) używa MongoDB. Widok jest generowany za pomocą HAML, oraz
-używa do UI darmowego Bootstrapa. Do obsługi i generowania formularzy
-jest simple_form (z rozszerzeniem do Bootstrap). Paginacja robiona za
-pomocą gem'a kaminari. Do autoryzacji i logowania/rejestrowania jest
-Devise. Do tego avatary są wyświetlane z serwisu http://gravatar.com.
+Wszystko leci na Ruby on Rails 3.2.3, czyli najnowszym. 
+Do storage(noSQL) używa MongoDB. 
+Widok jest generowany za pomocą HAML, oraz używa do UI darmowego Bootstrapa. 
+Do obsługi i generowania formularzy jest simple_form (z rozszerzeniem do Bootstrap). 
+Paginacja robiona za pomocą gem'a kaminari. 
+Do autoryzacji i logowania/rejestrowania jest Devise. 
+Do tego avatary są wyświetlane z serwisu http://gravatar.com.
 W postach można używać Markdown.
